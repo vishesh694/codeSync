@@ -1,6 +1,7 @@
 # 🚀 CodeSync
 
-A powerful real-time collaborative code editor built using **React, Socket.IO, Express, and CodeMirror**.  
+A powerful real-time collaborative code editor built using **React, Socket.IO, Express, and CodeMirror**.
+
 CodeSync allows multiple users to join the same room and collaborate on code instantly.
 
 ---
@@ -64,15 +65,18 @@ code-editor/
 │
 ├── server.cjs
 ├── package.json
+├── README.md
+```
 
-# ⚙️ Installation & Setup
+
+## ⚙️ Installation & Setup
 
 ```bash
 # Clone Repository
 git clone https://github.com/vishesh694/codeSync.git
 
 # Move Into Project Directory
-cd code-sync
+cd codeSync
 
 # Install Dependencies
 npm install
@@ -93,3 +97,4 @@ npm run start
 
 # Backend will run on:
 # http://localhost:8001
+```
