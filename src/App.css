@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #0f172a, #111827, #1e293b);
+    color: #fff;
+    overflow: hidden;
+}
+
+/* ================= HOME PAGE ================= */
+
+.homePageWrapper {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background: radial-gradient(circle at top left, #1e293b, #020617);
+}
+
+.formWrapper {
+    width: 420px;
+    max-width: 95%;
+    padding: 40px 35px;
+    border-radius: 24px;
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.5),
+        0 0 60px rgba(74, 237, 136, 0.1);
+}
+
+.homePageLogo {
+    height: 75px;
+    display: block;
+    margin: 0 auto 25px;
+}
+
+.mainLabel {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 28px;
+    color: #f8fafc;
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.inputBox {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid transparent;
+    border-radius: 14px;
+    background: #1e293b;
+    color: white;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+.inputBox::placeholder {
+    color: #94a3b8;
+}
+
+.inputBox:focus {
+    border-color: #4aed88;
+    box-shadow: 0 0 0 4px rgba(74, 237, 136, 0.15);
+    background: #0f172a;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 14px;
+    padding: 13px 18px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s ease;
+}
+
+.joinBtn,
+.leaveBtn {
+    background: linear-gradient(135deg, #4aed88, #22c55e);
+    color: #052e16;
+}
+
+.joinBtn:hover,
+.leaveBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(74, 237, 136, 0.25);
+}
+
+.joinBtn {
+    margin-top: 10px;
+}
+
+.createInfo {
+    margin-top: 24px;
+    text-align: center;
+    color: #cbd5e1;
+    font-size: 14px;
+}
+
+.createNewBtn {
+    color: #4aed88;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.createNewBtn:hover {
+    color: #86efac;
+}
+
+/* ================= EDITOR PAGE ================= */
+
+.editorWrap {
+    height: 100vh;
+    overflow: hidden;
+}
+
+.mainWrap {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
+}
+
+/* ================= SIDEBAR ================= */
+
+.aside {
+    background: rgba(15, 23, 42, 0.96);
+    border-right: 1px solid rgba(255, 255, 255, 0.06);
+    padding: 24px 18px;
+    display: flex;
+    flex-direction: column;
+    backdrop-filter: blur(12px);
+}
+
+.logo {
+    padding-bottom: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.logoImage {
+    height: 55px;
+}
+
+.asideInner {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.clientsList {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+}
+
+.client {
+    width: 90px;
+    padding: 14px 10px;
+    border-radius: 18px;
+    background: rgba(30, 41, 59, 0.8);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.3s ease;
+}
+
+.client:hover {
+    transform: translateY(-4px);
+    background: rgba(51, 65, 85, 0.9);
+}
+
+.userName {
+    margin-top: 10px;
+    font-size: 14px;
+    text-align: center;
+    color: #e2e8f0;
+}
+
+.leaveBtn {
+    width: 100%;
+    margin-top: 18px;
+}
+
+.copyBtn {
+    width: 100%;
+    margin-top: 12px;
+    background: #3b82f6;
+    color: white;
+}
+
+.copyBtn:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+/* ================= CODEMIRROR ================= */
+
+.CodeMirror {
+    min-height: 100vh;
+    font-size: 18px;
+    line-height: 1.8;
+    padding-top: 20px;
+    background: #020617 !important;
+    color: #f8fafc;
+}
+/* ================= SCROLLBAR ================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+    .mainWrap {
+        grid-template-columns: 80px 1fr;
+    }
+
+    .aside {
+        display: flex;
+        padding: 12px 8px;
+    }
+
+    .userName,
+    .logoImage,
+    .copyBtn,
+    .leaveBtn,
+    .aside h3 {
+        display: none;
+    }
+
+    .client {
+        width: 100%;
+        padding: 8px;
+        background: transparent;
+    }
+}   
